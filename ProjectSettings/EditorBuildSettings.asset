@@ -14,10 +14,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Demo.unity
     guid: 3b939dea0f07a5c469f9e8c32cd91d50
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/CenaClever.unity
-    guid: d603f4b8eb6335b45b7906ad75d1006d
+    path: Assets/Scenes/level02.unity
+    guid: 46da5e1031ca35f41b42dfcbaa4c96fe
   - enabled: 1
-    path: Assets/Scenes/ScenaMatheus.unity
-    guid: 53990a4034127874d9f8f4c510994664
+    path: Assets/Scenes/level03.unity
+    guid: 1769d4a3f249d0f46a55da85dfbdb650
   m_configObjects: {}
