@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public GameObject cam;
+    
+    public FixedJoystick joystick;
 
     private Animator anim;
 
@@ -21,6 +23,10 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    private float Move;
+
+    private float Move1;
+
     void Start ()
     {
 
@@ -34,8 +40,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-       float Move = Input.GetAxis("Horizontal");
-       float Move1 = Input.GetAxis("Vertical");
+       //float Move = Input.GetAxis("Horizontal");
+       //float Move1 = Input.GetAxis("Vertical"); 
+
+        Move = joystick.Horizontal;
+        Move1 = joystick.Vertical;
 
        rb.velocity = new Vector2 (Speed * Move, Speed * Move1);
 
