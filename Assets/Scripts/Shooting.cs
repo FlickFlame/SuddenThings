@@ -90,4 +90,23 @@ public class Shooting : MonoBehaviour
         }
     }
 
+
+    public void UpdateMana() {
+        if (ManaIntCount >= 0f && ManaIntCount <= 6f)
+        {
+
+            Shoot.GetComponent<Shoot>().enabled = true;  
+
+            if (Time.time > fireSpellStart + fireSpellCooldown)
+            {
+                fireSpellStart = Time.time;   
+
+                if(ManaIntCount != 0)
+                {
+                    ManaIntCount = ManaIntCount - 2;
+                }
+            }
+
+        }
+    }
 }
