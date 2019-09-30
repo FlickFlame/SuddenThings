@@ -26840,6 +26840,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7790596903186928055, guid: 2c24c1ff35f1ccc4699a351892bd223b,
         type: 3}
+    - target: {fileID: 67516302704902297, guid: 4f79afdc2147fe04c94f8e2c24040139,
+        type: 3}
+      propertyPath: PlayerFlip
+      value: 
+      objectReference: {fileID: 2072270242}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f79afdc2147fe04c94f8e2c24040139, type: 3}
 --- !u!4 &1829278146 stripped
@@ -27460,6 +27465,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 312653363998943544, guid: 9d7370dc402484e4c9b912e28aeba4f0,
     type: 3}
   m_PrefabInstance: {fileID: 455871189}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &2072270242 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 67516303157948388, guid: 4f79afdc2147fe04c94f8e2c24040139,
+    type: 3}
+  m_PrefabInstance: {fileID: 1829278145}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2119775084
 PrefabInstance:
