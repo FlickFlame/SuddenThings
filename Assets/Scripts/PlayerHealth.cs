@@ -15,6 +15,8 @@ public class PlayerHealth : MonoBehaviour
     public Sprite LifeOneBar;
     public Sprite LifeNoBar;
 
+    private bool wait = false;
+
     void Start()
     {
         sprenbar = LifeBar.GetComponent<SpriteRenderer>();
@@ -46,7 +48,10 @@ public class PlayerHealth : MonoBehaviour
     {
         if (col.gameObject.tag == "Enemy")
         {
-            PHealth = PHealth - 2;
+            if (wait == false) {
+                PHealth = PHealth - 2;
+                DoWait();
+            }
         }
     }
 
@@ -62,4 +67,25 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+
+    void DoWait() {
+        if (wait == false) {
+            StartCoroutine(DisableWait(2.0f));
+        }
+    }
+
+    private IEnumerator DisableWait(float waitTime)
+    {
+        ChangeAlpha(0.5f);
+        wait = true;
+        yield return new WaitForSeconds(waitTime);
+        ChangeAlpha(1f);        
+        wait = false;
+    }
+
+    private void ChangeAlpha(float alpha) {
+        Color tmp = GetComponent<SpriteRenderer>().color;
+        tmp.a = alpha;
+        GetComponent<SpriteRenderer>().color = tmp;
+    }   
 }

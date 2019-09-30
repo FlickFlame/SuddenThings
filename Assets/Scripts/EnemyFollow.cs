@@ -23,6 +23,9 @@ public class EnemyFollow : MonoBehaviour
     public GameObject drop1;
     public GameObject drop2;
     private int random;
+    public float repelForce = 10f;
+    public float pushTime = 1f;
+    private bool repelled = false;
 
     void Start()
     {
@@ -55,16 +58,18 @@ public class EnemyFollow : MonoBehaviour
         if(maxHealth == 2)
         sprenbar.sprite = OneBar;
 
-        if (player != null && follow == true)
-        {
-            Vector3 direction = (player.transform.position - transform.position).normalized;
-            rb.velocity = direction * speed;
-        }
+        if (repelled == false) {
+            if (player != null && follow == true)
+            {
+                Vector3 direction = (player.transform.position - transform.position).normalized;
+                rb.velocity = direction * speed;
+            }
 
-        else 
-        {
-            rb.velocity = Vector3.zero;
-        }        
+            else 
+            {
+                rb.velocity = Vector3.zero;
+            }        
+        }
     }
 
     void OnCollisionEnter2D(Collision2D col) 
@@ -77,7 +82,7 @@ public class EnemyFollow : MonoBehaviour
 
         if(col.gameObject.tag == "Player")
         {
-            Destroy(gameObject);
+            StartCoroutine(HurtEnemy());
         }
 
     }
@@ -100,4 +105,14 @@ public class EnemyFollow : MonoBehaviour
 
      }
 
+    private IEnumerator HurtEnemy()
+    {
+        GameObject player = GameObject.Find("Player");
+        Vector2 direction = transform.position - player.transform.position;
+        repelled = true;
+        rb.AddForce(direction * repelForce);
+        yield return new WaitForSeconds(pushTime);
+        rb.velocity = Vector2.zero;
+        repelled = false;
+    }
 }
