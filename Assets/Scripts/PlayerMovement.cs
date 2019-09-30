@@ -13,11 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject Sword;
 
-    Animator swordanim;
-
     private SpriteRenderer spren;
-
-    private SpriteRenderer swordspren;
 
     public float Speed = 2f;
 
@@ -32,10 +28,7 @@ public class PlayerMovement : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        swordanim = Sword.GetComponent<Animator>();
         spren = GetComponent<SpriteRenderer>();
-        swordspren = Sword.GetComponent<SpriteRenderer>();
-
     }
 
     void Update()
@@ -48,15 +41,9 @@ public class PlayerMovement : MonoBehaviour
 
        rb.velocity = new Vector2 (Speed * Move, Speed * Move1);
 
-       if(anim.GetBool("Move") == true)
-            swordanim.SetBool("PlayerMove", true);
-
-        if(anim.GetBool("Move") == false)
-            swordanim.SetBool("PlayerMove", false);
-
        if (Input.GetButtonDown("Fire1"))
        {
-            swordanim.Play("Hit");
+//            swordanim.Play("Hit");
        } 
 
         if (Move != 0f || Move1 != 0f)
@@ -71,14 +58,20 @@ public class PlayerMovement : MonoBehaviour
         if(Move > 0f)
         {
             spren.flipX = false;
-            swordspren.flipX = false;
         }
         if(Move < 0f)
         {
             spren.flipX = true;
-            swordspren.flipX = true;
         }
 
+    }
+
+    public Vector2 Aponta() {
+        Move = joystick.Horizontal;
+        Move1 = joystick.Vertical;
+
+        Vector2 vet = new Vector2 (Move, Move1);
+        return vet.normalized;
     }
 
 }

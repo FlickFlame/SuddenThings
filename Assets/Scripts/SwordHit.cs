@@ -6,6 +6,8 @@ public class SwordHit : MonoBehaviour
 {    
     private int maxHealth = 8; 
     public int MiHealth = 2;
+
+    [SerializeField]
     private SpriteRenderer sprenbar;
     private GameObject Bar;
     private GameObject Enemy;
@@ -17,13 +19,14 @@ public class SwordHit : MonoBehaviour
 
     void Start()
     {
-        Enemy = GameObject.FindWithTag("Player");
-        Bar = Enemy.gameObject.transform.GetChild(0).GetChild(0).gameObject;
-        sprenbar = Bar.GetComponent<SpriteRenderer>();
+        //Enemy = GameObject.FindWithTag("Player");
+        //Bar = Enemy.gameObject.transform.GetChild(0).GetChild(0).gameObject;
+        //sprenbar = Bar.GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
+    /*
         if(Input.GetMouseButtonDown(0)){
             Collider2D[] colliders = new Collider2D[3];
             transform.Find("SwordArea").gameObject.GetComponent<Collider2D>().OverlapCollider(new ContactFilter2D(), colliders);
@@ -35,20 +38,21 @@ public class SwordHit : MonoBehaviour
                         }
 
                         if(maxHealth == 8)
-        sprenbar.sprite = FourBars;
+                            sprenbar.sprite = FourBars;
 
-        if(maxHealth == 6)
-        sprenbar.sprite = ThreeBars;
+                        if(maxHealth == 6)
+                            sprenbar.sprite = ThreeBars;
 
-        if(maxHealth == 4)
-        sprenbar.sprite = TwoBars;
+                        if(maxHealth == 4)
+                            sprenbar.sprite = TwoBars;
 
-        if(maxHealth == 2)
-        sprenbar.sprite = OneBar;
+                        if(maxHealth == 2)
+                            sprenbar.sprite = OneBar;
 
 
                     }
                 }
         }
+    */
     }
 }

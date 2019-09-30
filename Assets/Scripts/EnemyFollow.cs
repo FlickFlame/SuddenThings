@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class EnemyFollow : MonoBehaviour
 {
 
-    float speed = 3f;
+    public float speed = 3f;
     GameObject player;
     public GameObject EnemyEmpty;
     public SpriteRenderer spren;
