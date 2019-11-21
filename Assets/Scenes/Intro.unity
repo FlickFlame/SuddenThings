@@ -322,7 +322,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 4
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -388,9 +388,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textArea: {fileID: 731731745}
   paragraphs:
-  - "Este \xE9 o texto do primeiro par\xE1grafo."
-  - "Este \xE9 o texto do segundo par\xE1grafo."
-  - "Este \xE9 o texto do terceiro par\xE1grafo."
+  - Esse jogo foi feito por alunos.
+  - Ao avaliar, tenha isso em mente.
+  - Contamos com voce.
   waitLetter: 0.05
   waitParagraph: 1
 --- !u!4 &851109194
