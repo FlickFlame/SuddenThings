@@ -7726,6 +7726,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5046796899048349311, guid: aeebe8d6c8e0df2418ace6bce1f5c2fa,
+        type: 3}
+      propertyPath: m_Name
+      value: Enemy (11)
+      objectReference: {fileID: 0}
     - target: {fileID: 6639816257099319053, guid: aeebe8d6c8e0df2418ace6bce1f5c2fa,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -7735,11 +7740,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 5046796899048349311, guid: aeebe8d6c8e0df2418ace6bce1f5c2fa,
-        type: 3}
-      propertyPath: m_Name
-      value: Enemy (11)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aeebe8d6c8e0df2418ace6bce1f5c2fa, type: 3}
@@ -23146,6 +23146,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: DoShoot
       objectReference: {fileID: 0}
+    - target: {fileID: 2904258245095404393, guid: fc37e3c0017eac24c8a96263f7c817e4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 317
+      objectReference: {fileID: 0}
+    - target: {fileID: 2904258245095404393, guid: fc37e3c0017eac24c8a96263f7c817e4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334520024364734106, guid: fc37e3c0017eac24c8a96263f7c817e4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -221
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc37e3c0017eac24c8a96263f7c817e4, type: 3}
 --- !u!1001 &984264737
@@ -34922,6 +34937,11 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 263263ceb52c7e04ca57f38385a9ec44, type: 3}
+    - target: {fileID: 1947007080697533302, guid: b0179f82f8df98f40b38dbca837e2a7d,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0179f82f8df98f40b38dbca837e2a7d, type: 3}
 --- !u!1001 &4694989825070034308
@@ -35046,12 +35066,12 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1280, y: 720}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -35780,8 +35800,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 128, y: 128}
-  m_SizeDelta: {x: 256, y: 256}
+  m_AnchoredPosition: {x: 172, y: 161}
+  m_SizeDelta: {x: 365.1, y: 365.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7161810194013119227
 GameObject:
